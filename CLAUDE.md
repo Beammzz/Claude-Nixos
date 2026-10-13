@@ -15,6 +15,7 @@ integration, and Wayland.
 ```
 flake.nix                         packages / overlay / nixosModules / apps.update / checks / formatter
 flake.lock                        nixpkgs (nixos-unstable)
+instruction.md                    end-user install / troubleshooting guide
 pkgs/claude-desktop/package.nix   .deb -> NixOS: autoPatchelf, app.asar patches, wrapper
 pkgs/claude-desktop/sources.json  GENERATED: version + per-system .deb url/hash
 pkgs/claude-desktop/fhs.nix       buildFHSEnv variant (MCP servers via npx/uvx/docker)

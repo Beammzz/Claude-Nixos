@@ -12,6 +12,9 @@ Debian/Ubuntu users install with apt) for NixOS.
 
 ## Quick start
 
+For the full step-by-step install guide (desktop-environment notes, how to
+check that it works, troubleshooting), see **[instruction.md](instruction.md)**.
+
 ### NixOS module (recommended)
 
 ```nix
