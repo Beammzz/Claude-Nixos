@@ -93,7 +93,10 @@ nix build .#packages.aarch64-linux.claude-desktop --option extra-platforms aarch
 Under qemu-user the aarch64 app's main process boots, and the app log shows
 `LOCAL OVERRIDE`. The Chromium renderer and GPU processes die with SIGTRAP,
 and the userns sandbox is unavailable, so a real GUI test needs real ARM64
-hardware.
+hardware. On real hardware (ProArt PZ13, Snapdragon X, Hyprland), the app has been
+checked to render on Wayland and on XWayland (`--ozone-platform=x11`).
+Note that the bundled Electron picks Wayland from `XDG_SESSION_TYPE` even
+with `WAYLAND_DISPLAY` unset, so test X11 with the explicit flag.
 
 ### Smoke tests on x86_64 (run as a non-root user so the sandbox is used)
 

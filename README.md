@@ -129,15 +129,18 @@ The update script rewrites `pkgs/claude-desktop/sources.json` and
 
 | | x86_64-linux | aarch64-linux |
 | --- | --- | --- |
-| Package builds, every ELF resolves (`autoPatchelf`) | ✅ | ✅ (built under qemu binfmt) |
-| App launches and renders (X11 / Xvfb) | ✅ | ⚠️ the main process boots under qemu-user, but the Chromium renderer can't run there |
-| Native Wayland (weston headless) | ✅ | not tested |
+| Package builds, every ELF resolves (`autoPatchelf`) | ✅ | ✅ natively, and under qemu binfmt |
+| App launches and renders on X11 (Xvfb / XWayland) | ✅ | ✅ XWayland on real hardware |
+| Native Wayland (weston headless / Hyprland) | ✅ | ✅ Hyprland on real hardware, GPU on the Adreno (`msm`) render node |
+| GlobalShortcuts portal detected | not tested | ✅ Hyprland portal |
 | Code tab uses the Nix-built Claude Code (`LOCAL OVERRIDE` in the log) | ✅ | ✅ |
 | `claude --version` | ✅ 2.1.295 | ✅ 2.1.295 |
 | NixOS module evaluates (every option combination) | ✅ | ✅ |
 
-The aarch64 build hasn't been run on real ARM64 hardware yet. If you run it on
-one, please report back.
+The aarch64 results come from an ASUS ProArt PZ13 (Snapdragon X, nixos-unstable,
+Hyprland 0.56.2) running the package directly. Signing in and running a Code-tab
+session with the NixOS module installed haven't been checked yet. If you run it
+on other ARM64 hardware, please report back.
 
 Not affiliated with Anthropic. Claude Desktop is proprietary software. This
 repository only contains Nix expressions that fetch Anthropic's published package.

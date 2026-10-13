@@ -234,9 +234,9 @@ No Secret Service is running. The log shows
 `[safeStorage] isEncryptionAvailable=false … backend=basic_text`.
 Keep `programs.claude-desktop.secretService = true` (gnome-keyring), or use
 KWallet on Plasma. The keyring also has to unlock when you log in. NixOS
-sets this up for the `login` PAM service and for GDM. With another greeter,
-add it yourself, for example
-`security.pam.services.greetd.enableGnomeKeyring = true;`.
+sets this up for the `login` PAM service and for GDM. greetd (tuigreet,
+regreet, …) reuses the `login` stack, so it needs nothing extra. With another
+greeter, set `security.pam.services.<name>.enableGnomeKeyring = true;`.
 
 **Sign-in finishes in the browser but the app never notices.**
 Check that the `claude://` handler is registered:
@@ -291,7 +291,7 @@ directory to reset the app completely.
 - Computer Use and voice dictation: Anthropic disables these on Linux.
 - Importing browser cookies from KWallet.
 
-The aarch64 package builds and its main process boots under emulation, but
-no one has tested the full GUI on real ARM64 hardware yet. If you run it on
-one, please open an issue with how it went and attach
-`~/.config/Claude/logs/main.log`.
+The aarch64 package has been run on an ASUS ProArt PZ13 (Snapdragon X,
+Hyprland): it renders natively on Wayland and through XWayland, and it uses
+the Nix-built Claude Code. If you run it on other ARM64 hardware, please open
+an issue with how it went and attach `~/.config/Claude/logs/main.log`.
