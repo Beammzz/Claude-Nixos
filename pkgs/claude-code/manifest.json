@@ -1,18 +1,18 @@
 {
-  "version": "2.1.295",
-  "buildDate": "2026-10-08T17:10:20Z",
-  "commit": "07e8f67ea3282bf154a9e05673a0942b1b173cef",
+  "version": "2.1.308",
+  "buildDate": "2026-10-22T03:50:00Z",
+  "commit": "320f66eb8f834be58a10c98283ebef19e3640c37",
   "baseUrl": "https://downloads.claude.ai/claude-code-releases",
   "platforms": {
     "linux-arm64": {
       "binary": "claude.zst",
-      "checksum": "9b32b47ec4b3fa5b884e12b7e130e94338e7787d5db031adf48e1b20e3a893ee",
-      "size": 88860590
+      "checksum": "6f872ce2362e3485abbd7dcb921514e3319ebe36c2efabb7193f128ed337d8d4",
+      "size": 102117787
     },
     "linux-x64": {
       "binary": "claude.zst",
-      "checksum": "71164c85f9d226928dec7acda1baf000f1991eb14fcec106536d84bd914032f8",
-      "size": 89586953
+      "checksum": "f8b3641a8d3664420bde0153433e03fd3fad5351a1a12cf6f798ed86c52c9ea9",
+      "size": 103095977
     }
   }
 }
