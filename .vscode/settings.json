@@ -1,0 +1,11 @@
+{
+  "python.analysis.extraPaths": [
+    "/home/harumi/.vscode/extensions/makeblock-community.novapi-companion-0.1.0/stubs",
+    "/home/harumi/.vscode/extensions/makeblock-community.novapi-companion-0.1.0/scripts"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.stubPath": "/home/harumi/.vscode/extensions/makeblock-community.novapi-companion-0.1.0/stubs/_stdlib",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  }
+}
